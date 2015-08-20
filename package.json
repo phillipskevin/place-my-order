@@ -9,8 +9,9 @@
     "url": ""
   },
   "scripts": {
+    "api": "place-my-order-api --port 7070",
     "test": "testee test.html --browsers firefox --reporter Spec --root http://localhost:8080",
-    "start": "can-serve --port 8080",
+    "start": "can-serve --proxy http://localhost:7070 --port 8080",
     "live-reload": "steal-tools live-reload",
     "develop": "npm start & npm run live-reload",
     "document": "documentjs"
@@ -33,7 +34,8 @@
       "testee",
       "donejs-deploy",
       "yeoman-environment",
-      "generator-donejs"
+      "generator-donejs",
+      "place-my-order-api"
     ]
   },
   "dependencies": {
@@ -45,6 +47,8 @@
     "done-css": "^1.1.6",
     "generator-donejs": "^0.2.8",
     "jquery": "^2.1.4",
+    "place-my-order-api": "^0.4.3",
+    "place-my-order-assets": "^0.1.1",
     "steal": "^0.11.0-pre.6",
     "yeoman-environment": "^1.2.7"
   },

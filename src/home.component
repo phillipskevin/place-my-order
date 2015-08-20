@@ -1,0 +1,22 @@
+<can-component tag="pmo-home">
+    <style type="less">
+        p { font-weight: bold; }
+    </style>
+    <template>
+        <p>{{message}}</p>
+    </template>
+    <view-model>
+        <script type="view-model">
+            import Map from 'can/map/';
+            import 'can/map/define/';
+            
+            export default Map.extend({
+                define: {
+                    message: {
+                        value: 'This is the pmo-home component'
+                    }
+                }
+            });
+        </script>
+    </view-model>
+</can-component>
